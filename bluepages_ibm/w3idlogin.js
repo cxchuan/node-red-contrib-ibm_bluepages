@@ -15,6 +15,7 @@ module.exports=function(RED){
   //});
              msg.payload = msg.payload.toLowerCase();
             node.send(msg);
-        })
+        });
     }
+     RED.nodes.registerType("w3idlogin",w3idlogin);
 }
