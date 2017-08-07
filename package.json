@@ -1,5 +1,5 @@
 {
-  "name": "ibm_bluepages",
+  "name": "node-red-ibm_bluepages",
   "version": "1.1.5",
   "description": "Function List: \r 1. getNameByIntranetID(intranetID, callback)\r Description: To Get the name by the intranet ID.\r The parameter is intranetID(e.g: guojial@cn.ibm.com)",
   "main": "bluepages.js",
@@ -16,8 +16,15 @@
   },
   "keywords": [
     "ibm",
-    "bluepages"
+    "bluepages",
+    "node-red"
   ],
+  "node-red":{
+  "nodes":{
+   "ibm_bluepages":"bluepages_ibm/lower-case.js"
+  }
+  }
+  ,
   "author": "thomasguo",
   "license": "IPL-1.0",
   "repository": {
