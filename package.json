@@ -21,7 +21,7 @@
   ],
   "node-red":{
   "nodes":{
-   "ibm_bluepages":"bluepages_ibm/bluepages.js"
+   "ibm_bluepages":"bluepages_ibm/w3idlogin.js"
   }
   }
   ,

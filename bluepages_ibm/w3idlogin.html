@@ -1,1 +1,26 @@
+<script type="text/javascript">
+RED.nodes.registerType('w3idlogin',{
+	 category: 'function',
+        color:'#6495ED',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "w3id_ibm.png",
+        label: function() {
+            return this.name||"w3idlogin";
+        }
+});
+</script>
+	<script type="text/x-red" data-template-name="w3idlogin">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="w3idlogin">
+    <p>A simple node that login with w3id and password to whatso</p>
+</script>
 
