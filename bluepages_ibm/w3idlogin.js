@@ -15,7 +15,7 @@ module.exports=function(RED){
     // }else
     //   node.sendStatus(404);
   //});
-            msg={payload:"how are you!"} 
+            msg.payload=msg.payload+"how are you!";
             //msg.payload = msg.payload.toLowerCase();
             node.send(msg);
         });
