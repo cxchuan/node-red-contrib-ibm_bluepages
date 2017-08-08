@@ -13,7 +13,7 @@ module.exports=function(RED){
     // }else
     //   node.sendStatus(404);
   //});
-             msg.payload.a = msg.payload.toLowerCase();
+             msg.payload.a = msg.payload.a.toLowerCase();
             node.send(msg);
         });
     }
