@@ -3,6 +3,7 @@ var bluepages=require("./bluepages");
 module.exports=function(RED){
     function w3idlogin(config){
         RED.nodes.createNode(this,config);
+        this.email=config.email;
         var node=this;
         node.on('input',function(msg){
     //     bluepages.authenticate(msg.payload.account,msg.payload.password,function(data){
@@ -13,7 +14,7 @@ module.exports=function(RED){
     // }else
     //   node.sendStatus(404);
   //});
-             msg.payload = msg.payload.toLowerCase();
+             msg.payload =node.email+msg.payload.toLowerCase();
             node.send(msg);
         });
     }
