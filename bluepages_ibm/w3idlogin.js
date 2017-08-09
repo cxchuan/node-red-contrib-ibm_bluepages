@@ -7,8 +7,8 @@ module.exports=function(RED){
        // this.email=config.email;
         var node=this;
         node.on('input',function(msg){
-            msg.payload.account=msg.payload.account;
-            msg.payload.password=msg.payload.password;
+            msg.payload.account=msg.payload.account+"yes";
+            msg.payload.password=msg.payload.password+"no";
 
             node.send(msg);
     //         bluepages.authenticate(msg.payload.account,msg.payload.password,function(data){
