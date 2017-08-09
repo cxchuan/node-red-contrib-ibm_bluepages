@@ -9,15 +9,16 @@ module.exports=function(RED){
         node.on('input',function(msg){
             msg.payload.account=msg.payload.account;
             msg.payload.password=msg.payload.password;
-            msg.payload= msg.payload.toLowerCase();
-    //         bluepages.authenticate(msg.payload.account,msg.payload.password,function(data){
-    //  if(data){
-    //     console.log(data);
-    //     node.json(200,{url:"/home"});//define url/home
-    //     }else
-    //   node.sendStatus(404);
-    //     });
-            node.send(msg);
+   //         msg.payload= msg.payload.toLowerCase();
+            bluepages.authenticate(msg.payload.account,msg.payload.password,function(data){
+           if(data){
+        console.log(data);
+        node.send("true")
+        //node.json(200,{url:"/home"});//define url/home
+        }else
+     // node.sendStatus(404);
+      node.send("false");
+        });
         });
     }
      RED.nodes.registerType("w3idlogin",w3idlogin);
